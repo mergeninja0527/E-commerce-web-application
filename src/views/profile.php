@@ -51,8 +51,8 @@ if(isset($_POST['update']) && CSRF::validateToken($_POST['token'])) {
                 <form action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
                   <ul class="user-profile-list">
                     <?php CSRF::csrfInputField() ?>
-                    <li><span>Firstname:</span><input type="text" name="firstname" value="<?= htmlspecialchars(explode(' ', $_SESSION['name'])[1]) ?>"></li>
-                    <li><span>Lastname:</span><input type="text" name="lastname" value="<?= htmlspecialchars(explode(' ', $_SESSION['name'])[0]) ?>"></li>
+                    <li><span>First name:</span><input type="text" name="firstname" value="<?= htmlspecialchars(explode(' ', $_SESSION['name'])[1]) ?>"></li>
+                    <li><span>Last name:</span><input type="text" name="lastname" value="<?= htmlspecialchars(explode(' ', $_SESSION['name'])[0]) ?>"></li>
                     <li><span>Address:</span><input type="text" name="address" value="<?= htmlspecialchars($_SESSION['address']) ?>"></li>
                     <li><span>Phone:</span><input type="tel" name="phone" value="<?= htmlspecialchars($_SESSION['phone']) ?>"></li>
                     <li><button class="btn btn-main" type="submit" name="update">Update</button></li>
